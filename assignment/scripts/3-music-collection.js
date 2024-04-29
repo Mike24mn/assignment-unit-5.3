@@ -36,8 +36,25 @@ function showCollection(collection) {
 
 showCollection(myCollection);
 
+function findByArtist(collection, string) {
+  let emptyArray = []
+  for (const album of collection) {
+    if(album.artist === string) {
+      emptyArray.push(album)
+    }
+  }
+  return emptyArray;
+}
 
+showCollection(myCollection)
 
+let resultsForMarsVolta = findByArtist(myCollection, "The Mars Volta"); 
+// Test for artist in array myCollection!
+console.log("Test for 'The Mars Volta':", resultsForMarsVolta);
+
+let resultsForTaylorSwift = findByArtist(myCollection, "Taylor Swift");
+// Test for artist not in array myCollection!
+console.log("Test for Taylor Swift':", resultsForTaylorSwift);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
