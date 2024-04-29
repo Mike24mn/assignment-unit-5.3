@@ -14,15 +14,27 @@ const newAlbumz = {
 
   yearPublished: yearPublished
 } //end newAlbumz 
-  collection.push(newAlbumz)
+  collection.push(newAlbumz) // push given collection parameters to the newAlbumz object placeholders title, artist, yearPublished
 
   return newAlbumz;
 }
 
+addToCollection(myCollection, "Frances the Mute", "The Mars Volta", "2005" )
+addToCollection(myCollection, "Relationship of Command", "At the Drive-in", "2000" )
+addToCollection(myCollection, "Porcelain", "Sparta", "2004" )
+addToCollection(myCollection, "End Hits", "Fugazi", "1998" )
+addToCollection(myCollection, "Bear vs Shark", "Terrorhawk", "2005" )
+addToCollection(myCollection, "June of 44", "Four Great Points", "1998" )
 
-myCollection.push(newObject)
+console.log(myCollection); // console logged some great post-punk albums!
 
+function showCollection(collection) {
+  for (const album of collection) {
+    console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
+  }
+}
 
+showCollection(myCollection);
 
 
 
